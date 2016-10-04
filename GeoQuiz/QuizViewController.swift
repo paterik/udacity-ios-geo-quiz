@@ -46,7 +46,7 @@ class QuizViewController: UIViewController {
         ["name": "German", "bcp47Code": "de-DE", "textToRead": "Lernen ist eine lebenslange Reise.", "flagImageName": "germanyFlag"],
         ["name": "Spanish", "bcp47Code": "es-ES", "textToRead": "El aprendizaje es una búsqueda que dura toda la vida.", "flagImageName": "spainFlag"],
         ["name": "French", "bcp47Code": "fr-FR", "textToRead": "L'apprentissage est une longue quête de la vie.", "flagImageName": "franceFlag"],
-        ["name": "Polish", "bcp47Code": "pl-PL", "textToRead": "Uczenie się przez całe życie pościg.", "flagImageName": "czechFlag"],
+        ["name": "Polish", "bcp47Code": "pl-PL", "textToRead": "Uczenie się przez całe życie pościg.", "flagImageName": "polandFlag"],
         ["name": "English", "bcp47Code": "en-US", "textToRead": "Learning is a life long pursuit.", "flagImageName": "unitedStatesFlag"],
         ["name": "Portuguese", "bcp47Code": "pt-BR", "textToRead": "A aprendizagem é um longa busca que dura toda a vida.", "flagImageName": "brazilFlag"],
     ]
@@ -54,11 +54,6 @@ class QuizViewController: UIViewController {
     //
     // MARK: Life Cycle
     //
-    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
-        coordinator.animateAlongsideTransition({ (context) -> Void in
-            self.setStackViewLayout()
-            }, completion: nil)
-    }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -67,7 +62,6 @@ class QuizViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setStackViewLayout()
         setupLanguages()
     }
     
@@ -96,28 +90,6 @@ class QuizViewController: UIViewController {
             displayAlert("Correct", messageText: "Right on!")
         } else {
             displayAlert("Incorrect", messageText: "Nope. try again")
-        }
-    }
-
-    //
-    // MARK: UI Functions
-    //
-    func setInnerStackViewsAxis(axisStyle: UILayoutConstraintAxis) {
-        self.innerStackViewRow1.axis = axisStyle
-        self.innerStackViewRow2.axis = axisStyle
-        self.innerStackViewRow3.axis = axisStyle
-        self.innerStackViewRow4.axis = axisStyle
-    }
-    
-    func setStackViewLayout() {
-        let orientation = UIApplication.sharedApplication().statusBarOrientation
-        
-        if orientation.isPortrait{
-            self.outerStackView.axis = .Vertical
-            self.setInnerStackViewsAxis(.Horizontal)
-        } else {
-            self.outerStackView.axis = .Horizontal
-            self.setInnerStackViewsAxis(.Vertical)
         }
     }
 }

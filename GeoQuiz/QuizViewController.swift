@@ -40,21 +40,10 @@ class QuizViewController: UIViewController {
     var bcpCode = ""
     
     let speechSynth = AVSpeechSynthesizer()
-    let quizNodes: [[String : AnyObject]]  = [
-        ["name": "Czech", "bcp47Code": "cs-CZ", "textToRead": "Učení je celoživotní výkon.", "flagImageName": "czechFlag"],
-        ["name": "Danish", "bcp47Code": "da-DK", "textToRead": "Læring er en livslang stræben.", "flagImageName": "denmarkFlag"],
-        ["name": "German", "bcp47Code": "de-DE", "textToRead": "Lernen ist eine lebenslange Reise.", "flagImageName": "germanyFlag"],
-        ["name": "Spanish", "bcp47Code": "es-ES", "textToRead": "El aprendizaje es una búsqueda que dura toda la vida.", "flagImageName": "spainFlag"],
-        ["name": "French", "bcp47Code": "fr-FR", "textToRead": "L'apprentissage est une longue quête de la vie.", "flagImageName": "franceFlag"],
-        ["name": "Polish", "bcp47Code": "pl-PL", "textToRead": "Uczenie się przez całe życie pościg.", "flagImageName": "polandFlag"],
-        ["name": "English", "bcp47Code": "en-US", "textToRead": "Learning is a life long pursuit.", "flagImageName": "unitedStatesFlag"],
-        ["name": "Portuguese", "bcp47Code": "pt-BR", "textToRead": "A aprendizagem é um longa busca que dura toda a vida.", "flagImageName": "brazilFlag"],
-    ]
     
     //
     // MARK: Life Cycle
     //
-    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         resetButtonToState(.NoQuestionUpYet)
@@ -86,7 +75,7 @@ class QuizViewController: UIViewController {
     }
 
     @IBAction func flagButtonPressed(sender: UIButton) {
-        if (sender.tag == correctButtonTag) {
+        if sender.tag == correctButtonTag {
             displayAlert("Correct", messageText: "Right on!")
         } else {
             displayAlert("Incorrect", messageText: "Nope. try again")

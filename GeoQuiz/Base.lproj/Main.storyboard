@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="8sa-Cj-rbq">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Quiz View Controller-->
+        <scene sceneID="6CO-vj-Ddo">
+            <objects>
+                <viewController id="8sa-Cj-rbq" customClass="QuizViewController" customModule="GeoQuiz" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UHU-K2-IXY"/>
+                        <viewControllerLayoutGuide type="bottom" id="6wM-6z-bDx"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="u1d-yc-aVr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="LsK-BO-SFV" userLabel="VerticalStackView">
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="0Sq-cQ-AaL" userLabel="Horizontal SV1">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aRp-Fg-Tkm">
+                                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="flagButtonPressed:" destination="8sa-Cj-rbq" eventType="touchUpInside" id="4Yw-Zk-dwJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="lem-YI-ys3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wFy-LX-VAA" userLabel="Horizontal SV2">
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zQ3-oh-SEg">
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="flagButtonPressed:" destination="8sa-Cj-rbq" eventType="touchUpInside" id="3PO-ok-zdQ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="iXD-jq-Ko3"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="PwN-bw-F2F" userLabel="Horizontal SV3">
+                                        <subviews>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vCL-RX-pNW">
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal">
+                                                    <color key="titleColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="flagButtonPressed:" destination="8sa-Cj-rbq" eventType="touchUpInside" id="Bu4-hR-4BJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="HwS-z8-BCs"/>
+                                        </constraints>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="qaP-ER-r4V" userLabel="Horizontal SV4">
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wbP-OA-fAs">
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <state key="normal" title="Hear Phrase"/>
+                                                <connections>
+                                                    <action selector="hearPhrase:" destination="8sa-Cj-rbq" eventType="touchUpInside" id="u3W-4q-SEE"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="145" id="SvB-HA-xu2"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="LsK-BO-SFV" secondAttribute="trailing" id="DiI-2h-Yh7"/>
+                            <constraint firstItem="LsK-BO-SFV" firstAttribute="leading" secondItem="u1d-yc-aVr" secondAttribute="leadingMargin" id="IND-ht-OeS"/>
+                            <constraint firstItem="6wM-6z-bDx" firstAttribute="top" secondItem="LsK-BO-SFV" secondAttribute="bottom" id="mXU-Jg-Iam"/>
+                            <constraint firstItem="LsK-BO-SFV" firstAttribute="top" secondItem="UHU-K2-IXY" secondAttribute="bottom" id="vGE-N9-T1P"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="flagButton1" destination="aRp-Fg-Tkm" id="AyN-XG-UTh"/>
+                        <outlet property="flagButton2" destination="zQ3-oh-SEg" id="lVc-C5-Ihx"/>
+                        <outlet property="flagButton3" destination="vCL-RX-pNW" id="lFy-LV-ciK"/>
+                        <outlet property="innerStackViewRow1" destination="0Sq-cQ-AaL" id="hKf-7v-SkH"/>
+                        <outlet property="innerStackViewRow2" destination="wFy-LX-VAA" id="Ns1-L2-Obw"/>
+                        <outlet property="innerStackViewRow3" destination="PwN-bw-F2F" id="a6H-DS-Uwi"/>
+                        <outlet property="innerStackViewRow4" destination="qaP-ER-r4V" id="Oi1-0G-pin"/>
+                        <outlet property="outerStackView" destination="LsK-BO-SFV" id="KRh-Cb-ZZj"/>
+                        <outlet property="repeatPhraseButton" destination="wbP-OA-fAs" id="FfI-15-EIc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SHM-Vl-2fj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1078" y="204"/>
+        </scene>
+    </scenes>
+</document>
